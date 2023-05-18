@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!--
+  Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+      https://cordova.apache.org/docs/en/latest/
+  Some notes:
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+  -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: content:" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>SIG - Draggable Marker</title>
+
+    <!-- Google Maps Setup javascript -->
+    <link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyBwlgebS3bplkEr9NEFBhut66Xo-m4muW4"></script>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="icon" href="assets/icons/favicon.png" />
+
+    <link rel="stylesheet" href="framework7/framework7-bundle.min.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Left panel with cover effect-->
+      <div class="panel panel-left panel-reveal dark panel-init">
+        <div class="view">
+          <div class="page">
+            <div class="navbar">
+              <div class="navbar-bg"></div>
+              <div class="navbar-inner">
+                <div class="title">Credit</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <div class="block">
+                <p>
+                  Januaray Satya Ega <br />
+                  Universitas Udayana
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main view-init safe-areas">
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar navbar-large">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="left">
+                <a href="#" class="link icon-only panel-open" data-panel="left">
+                  <i class="icon f7-icons if-not-md">menu</i>
+                  <i class="icon material-icons if-md">menu</i>
+                </a>
+              </div>
+              <div class="title sliding">SIG - Draggable Marker (Google Maps)</div>
+              <div class="title-large">
+                <div class="title-large-text">SIG - Draggable Marker</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block">
+              <div>
+                <div class="profile block">
+                  <img src="./assets/img/Circle Image.png" alt="" />
+                  <div class="name">
+                    <h3>Nama : Januaray Satya Ega</h3>
+                    <h3>NIM : 2005541073</h3>
+                  </div>
+                </div>
+                <div class="block-title">Detail Tugas</div>
+                <p class="block">
+                  Buatlah sebuah object peta pada OpenStreetMap dengan titik koordinat tengah peta -8.7467357,115.1668024 kemudian tambahkan sebuah draggable marker (penanda) pada koordinat tersebut dan tampilkan sebuah Pop ip berisi
+                  informasi koordinat ketika marker tersebut dipindahkan dan ketika marker (penanda) tersebut di-klik maka tampilkan informasi:"Ini adalah Marker"
+                </p>
+              </div>
+              <div class="map block">
+                <div id="map-canvas" style="width: 2000px; height: 300px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Framework7 library -->
+    <script src="framework7/framework7-bundle.min.js"></script>
+
+    <!-- App routes -->
+    <script src="js/routes.js"></script>
+    <!-- App store -->
+    <script src="js/store.js"></script>
+    <!-- App scripts -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

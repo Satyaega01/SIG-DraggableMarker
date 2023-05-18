@@ -1,0 +1,53 @@
+<!-- Google Maps Setup javascript -->
+<link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet" />
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyBwlgebS3bplkEr9NEFBhut66Xo-m4muW4"></script>
+<template>
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Google Maps Street</div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default function (props, { $f7, $on, $onBeforeMount, $onMounted, $onBeforeUnmount, $onUnmounted }) {
+    // Component Methods
+    const openAlert = () => {
+      $f7.dialog.alert("Hello World");
+    };
+
+    // Page Events
+    $on("pageMounted", (e, page) => {
+      console.log("pageMounted", page);
+    });
+    $on("pageInit", (e, page) => {
+      console.log("pageInit", page);
+    });
+    $on("pageBeforeIn", (e, page) => {
+      console.log("pageBeforeIn", page);
+    });
+    $on("pageAfterIn", (e, page) => {
+      console.log("pageAfterIn", page);
+    });
+    $on("pageBeforeOut", (e, page) => {
+      console.log("pageBeforeOut", page);
+    });
+    $on("pageAfterOut", (e, page) => {
+      console.log("pageAfterOut", page);
+    });
+    $on("pageBeforeRemove", (e, page) => {
+      console.log("pageBeforeRemove", page);
+    });
+
+    // Return render function
+    return $render;
+  }
+</script>

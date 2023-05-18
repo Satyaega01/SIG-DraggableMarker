@@ -1,0 +1,25 @@
+/* Your app custom styles here */
+
+.map {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+
+#map-canvas {
+  border-radius: 10px;
+}
+
+.profile {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.profile img {
+  width: 50px;
+}
+
+.name h3 {
+  margin: 0;
+}

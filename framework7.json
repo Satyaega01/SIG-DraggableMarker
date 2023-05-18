@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\Users\\satya\\Udayana\\Kuliah\\Semester 6\\Sistem Informasi Geografis\\Tugas\\SIG-DraggableMarker",
+  "type": [
+    "web"
+  ],
+  "name": "SIG - Draggable Marker",
+  "framework": "core",
+  "template": "single-view",
+  "bundler": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkMode": false,
+    "iconFonts": true
+  },
+  "customBuild": false
+}
